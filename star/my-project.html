@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 
@@ -169,30 +170,32 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="p-5">
-                                <div class="text-center">
+                                <div class="text-center text-white">
                                     <br><br>  
-                                    <h1>All Equipment</h1>
+                                    <h1>My Project</h1>
                                     <br><br>  
                                 <form action="submit.php">
+                                    <input class="display-none" type="text" value="" name="" id="input_value">
+                                    <button class="display-none" type="submit" id="submit_button"></button>
                                     <div class="table-responsive">
                                         <table class="text-white table table-active table-bordered">
                                           <thead>
                                             <tr>
-                                              <th>EID</th>
-                                              <th>User</th>
-                                              <th>Site</th>
-                                              <th>Longitude</th>
-                                              <th>Latitude</th>
-                                              <th>Altitude</th>
-                                              <th>Time Zone</th>
-                                              <th>Daylight Saving</th>
-                                              <th>Water Vapor</th>
-                                              <th>Light Pollution (M/SAS)</th>
-                                              <th>Aperture</th>
-                                              <th>Fo V</th>
-                                              <th>Pixel Scale</th>
-                                              <th>Limiting Magnitude (MAG)</th>
-                                              <th>Elevation Limit (DEG)</th>
+                                              <th>Edit</th>
+                                              <th>Delete</th>
+                                              <th>PID</th>
+                                              <th>Tittle</th>
+                                              <th>Description</th>
+                                              <th>Manager</th>
+                                              <th>Participants</th>
+                                              <th>Project Type</th>
+                                              <th>PI</th>
+                                              <th>Aperture Upper Limit</th>
+                                              <th>Aperture Lower Limit</th>
+                                              <th>Fo V Upper Limit</th>
+                                              <th>Fo V Lower Limit</th>
+                                              <th>Pixel Scale Upper Limit</th>
+                                              <th>Pixel Scale Lower Limit</th>
                                               <th>Mount Type (German, Fork, Theodolite)</th>
                                               <th>Camera Type (Colored, Mono)</th>
                                               <th>Camera Type (Cooled, Uncooled)</th>
@@ -208,11 +211,20 @@
                                           </thead>
                                           <tbody>
                                             <tr>
+                                                <td>
+                                                    <button  class="btn "><a href="edit-project-pid.html">
+                                                        <i class="fas fa-fw fa-cog text-white"></i>
+                                                        </a></i></button>  
+                                                </td>
+                                                <td>
+                                                    <button type="submit" class="btn " onclick="delete_project(0)"><i class="fas fa-trash text-white"></i></button>  
+                                                </td>                                                
                                               <td>0</td>
-                                              <td>Jeremy</td>
-                                              <td>University of Tokyo Atacama Observatory</td>
+                                              <td>Galaxy 1</td>
+                                              <td>Observe Galaxy 1</td>
+                                              <td>Jason</td>
+                                              <td>10</td>
                                               
-                                              <td>1.0688955298553253</td>
                                               <td>255.83816116433158</td>
                                               <td>2.721238841447313</td>
                                               <td>0.18709646832735033</td>
@@ -230,10 +242,22 @@
                                               <td>n</td>
                                             </tr>
                                             <tr>
+                                                <td>
+                                                    <button  class="btn "><a href="edit-project-pid.html">
+                                                        <i class="fas fa-fw fa-cog text-white"></i>
+                                                        </a></i></button>  
+                                                </td>
+                                                <td>
+                                                    <button type="submit" class="btn " onclick="delete_project(0)"><i class="fas fa-trash text-white"></i></button>  
+                                                </td>
                                                 <td>1</td>
-                                                <td>Jason</td>
-                                                <td>James Ax Observatory</td>
-                                                <td>1.0688955298553253</td>
+                                                <td>Galaxy 2</td>
+                                                <td>Observe Galaxy 2</td>
+                                                <td>Lilian</td>
+                                                <td>15</td>
+                                                <td>15.8381611</td>
+                                                <td>213</td>
+                                                <td>12</td>
                                                 <td>255.83816116433158</td>
                                                 <td>2.721238841447313</td>
                                                 <td>0.18709646832735033</td>

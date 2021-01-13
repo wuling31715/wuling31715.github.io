@@ -19,6 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 
@@ -61,9 +62,9 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Project Management</h6>
-                        <a class="collapse-item" href="blank.html">My Project</a>
-                        <a class="collapse-item" href="blank.html">All Project</a>
-                        <a class="collapse-item" href="blank.html">Create Project</a>
+                        <a class="collapse-item" href="my-project.html">My Project</a>
+                        <a class="collapse-item" href="all-project.html">All Project</a>
+                        <a class="collapse-item" href="create-project.html">Create Project</a>
                     </div>
                 </div>
             </li>
@@ -90,7 +91,7 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="blank.html">
+                <a class="nav-link" href="schedule.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Schadule</span></a>
             </li>
@@ -173,14 +174,24 @@
                                     <br><br>  
                                     <h1>My Equipment</h1>
                                     <br><br>  
-                                <form action="delete.php">
+                                <form action="submit.php">
+                                    <input class="display-none" type="text" value="" name="" id="input_value">
+                                    <button class="display-none" type="submit" id="submit_button"></button>
                                     <div class="table-responsive">
                                         <table class="text-white table table-active  table-bordered">
                                           <thead>
                                             <tr>
-                                              <th>EID</th>
                                               <th>Edit</th>
                                               <th>Delete</th>
+                                              <th>EID</th>
+                                              <th>Site</th>
+                                              <th>Longitude</th>
+                                              <th>Latitude</th>
+                                              <th>Altitude</th>
+                                              <th>Time Zone</th>
+                                              <th>Daylight Saving</th>
+                                              <th>Water Vapor</th>
+                                              <th>Light Pollution (M/SAS)</th>
                                               <th>Aperture</th>
                                               <th>Fo V</th>
                                               <th>Pixel Scale</th>
@@ -201,16 +212,17 @@
                                           </thead>
                                           <tbody>
                                             <tr>
-                                              <td>0</td>
                                               
                                                 <td>
-                                                    <button  class="btn "><a href="edit-equipment.html">
+                                                    <button  class="btn "><a href="edit-equipment-eid.html">
                                                         <i class="fas fa-fw fa-cog text-white"></i>
                                                         </a></i></button>  
                                                 </td>
                                                 <td>
-                                                    <button type="submit" class="btn "><i class="fas fa-trash text-white"></i></button>  
+                                                    <button type="submit" class="btn " onclick="delete_equipment(3)"><i class="fas fa-trash text-white"></i></button>  
                                                 </td>
+                                              <td>0</td>
+                                              <td>University of Tokyo Atacama Observatory</td>
                                               <td>1.0688955298553253</td>
                                               <td>255.83816116433158</td>
                                               <td>2.721238841447313</td>
@@ -229,15 +241,16 @@
                                               <td>n</td>
                                             </tr>
                                             <tr>
-                                                <td>1</td>
                                                 <td>
-                                                    <button  class="btn "><a href="edit-equipment.html">
+                                                    <button  class="btn "><a href="edit-equipment-eid.html">
                                                         <i class="fas fa-fw fa-cog text-white"></i>
                                                         </a></i></button>  
                                                 </td>
                                                 <td>
-                                                    <button type="submit" class="btn "><i class="fas fa-trash text-white"></i></button>  
+                                                    <button type="submit" class="btn " onclick="delete_equipment(5)"><i class="fas fa-trash text-white"></i></button>  
                                                 </td>
+                                                <td>1</td>
+                                                <td>University of Tokyo Atacama Observatory</td>
                                                 <td>1.0688955298553253</td>
                                                 <td>255.83816116433158</td>
                                                 <td>2.721238841447313</td>
